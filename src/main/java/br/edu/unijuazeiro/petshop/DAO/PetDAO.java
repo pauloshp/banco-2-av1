@@ -10,7 +10,7 @@ import br.edu.unijuazeiro.petshop.model.Pet;
 
 public class PetDAO {
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("unit-unijuazeiro");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Pet-Shop");
     EntityManager em = emf.createEntityManager();
 
     public List<Pet> listAll() {
@@ -47,8 +47,7 @@ public class PetDAO {
         }
     }
 
-    public void remove(int id) {
-        Pet pet = em.find(Pet.class, id);
+    public void remove(Pet pet) {
         try {
             em.getTransaction().begin();
             em.remove(pet);

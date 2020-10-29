@@ -10,7 +10,7 @@ import br.edu.unijuazeiro.petshop.model.Cliente;
 
 public class ClienteDAO {
 
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("unit-unijuazeiro");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("Pet-Shop");
     EntityManager em = emf.createEntityManager();
     
     public List<Cliente> listAll() {
