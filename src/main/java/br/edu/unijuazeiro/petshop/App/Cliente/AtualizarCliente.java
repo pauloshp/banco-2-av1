@@ -1,5 +1,4 @@
-package br.edu.unijuazeiro.petshop;
-
+package br.edu.unijuazeiro.petshop.App.Cliente;
 
 import br.edu.unijuazeiro.petshop.DAO.ClienteDAO;
 import br.edu.unijuazeiro.petshop.model.Cliente;
