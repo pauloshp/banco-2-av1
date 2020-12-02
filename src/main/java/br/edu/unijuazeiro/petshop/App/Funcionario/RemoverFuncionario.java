@@ -9,7 +9,7 @@ public class RemoverFuncionario {
 
         FuncionarioDAO dao = new FuncionarioDAO();
 
-        Funcionario f = dao.findId(5);
+        Funcionario f = dao.findId(1);
         System.out.println("Id: " + f.getCodigo());
         System.out.println("Nome: " + f.getNome());
         System.out.println("CPF: " + f.getCpf());

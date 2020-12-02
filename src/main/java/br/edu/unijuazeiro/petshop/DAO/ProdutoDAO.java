@@ -58,7 +58,7 @@ public class ProdutoDAO {
         EntityManager em = ConexaoFabrica.getEntityManager();
         try {
             em.getTransaction().begin();
-            em.remove(produto);
+            em.remove(em.getReference(Produto.class, produto.getCodigo()));
             em.getTransaction().commit();
         } catch (Exception ex) {
             ex.printStackTrace();

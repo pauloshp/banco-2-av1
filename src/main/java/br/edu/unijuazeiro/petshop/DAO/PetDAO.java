@@ -60,7 +60,7 @@ public class PetDAO {
         EntityManager em = ConexaoFabrica.getEntityManager();
         try {
             em.getTransaction().begin();
-            em.remove(pet);
+            em.remove(em.getReference(Pet.class, pet.getCodigo()));
             em.getTransaction().commit();
         } catch (Exception ex) {
             ex.printStackTrace();

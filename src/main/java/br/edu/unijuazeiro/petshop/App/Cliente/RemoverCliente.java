@@ -10,7 +10,7 @@ public class RemoverCliente {
 
         ClienteDAO dao = new ClienteDAO();
 
-        Cliente c = dao.findId(5);
+        Cliente c = dao.findId(1);
         System.out.println("Id: " + c.getCodigo());
         System.out.println("Nome: " + c.getNome());
         System.out.println("CPF: " + c.getCpf());

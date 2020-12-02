@@ -60,7 +60,7 @@ public class FuncionarioDAO {
         EntityManager em = ConexaoFabrica.getEntityManager();
         try {
             em.getTransaction().begin();
-            em.remove(funcionario);
+            em.remove(em.getReference(Funcionario.class, funcionario.getCodigo()));
             em.getTransaction().commit();
         } catch (Exception ex) {
             ex.printStackTrace();
