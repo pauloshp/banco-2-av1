@@ -9,11 +9,12 @@ public class AdicionarFuncionario {
         FuncionarioDAO dao = new FuncionarioDAO();
 
         Funcionario f = new Funcionario();
-        f.setNome("André");
-        f.setCpf("5215353415134");
+        f.setNome("Thiago");
+        f.setCpf("12345678910");
         f.setTelefone("354687654342");
         f.setEmail("efksjdnfs@fdsdfsd.com");
-        f.setFuncao("Tosador");
+        f.setFuncao("Zelador");
+        f.setSenha("senha");
         dao.persist(f);
     }
 }

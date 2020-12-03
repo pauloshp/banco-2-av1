@@ -11,8 +11,9 @@ public class AdicionarCliente {
 
         // Insert Cliente
         Cliente c = new Cliente();
-        c.setNome("Paulo");
-        c.setCpf("000.000.000-00");
+        c.setNome("Thiago");
+        c.setCpf("100.100.100-10");
+        c.setEmail("xico@bol.uol.msn.edu.br");
         dao.persist(c);
     }
 }

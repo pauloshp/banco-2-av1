@@ -15,9 +15,9 @@ public class FuncionarioDAO {
         return em.createQuery("from Funcionario", Funcionario.class).getResultList();
     }
 
-    public Funcionario findId(int id) {
+    public Funcionario findId(Integer codigo) {
         EntityManager em = ConexaoFabrica.getEntityManager();
-        return em.find(Funcionario.class, id);
+        return em.find(Funcionario.class, codigo);
     }
 
     public void persist(Funcionario funcionario) {
