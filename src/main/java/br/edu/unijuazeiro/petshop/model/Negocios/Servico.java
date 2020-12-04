@@ -1,4 +1,4 @@
-package br.edu.unijuazeiro.petshop.model;
+package br.edu.unijuazeiro.petshop.model.Negocios;
 
 import java.sql.Date;
 
@@ -12,6 +12,7 @@ import javax.persistence.SequenceGenerator;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,19 +23,26 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Servico {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen_servico")
     @SequenceGenerator(sequenceName = "seq_servico", allocationSize = 1, initialValue = 1, name = "gen_servico")
-   
     private Integer codigo;
+
     private String nome;
+
     private Date data;
+
     private Double valor;
+
     private String tipo;
 
     @OnDelete(action = OnDeleteAction.CASCADE)
     @OneToOne
     private Cliente cliente;
+
     //private Funcionario funcionario;
+    
     //private Pet pet;
+
 }

@@ -1,4 +1,4 @@
-package br.edu.unijuazeiro.petshop.model;
+package br.edu.unijuazeiro.petshop.model.Cliente;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -3,7 +3,7 @@ package br.edu.unijuazeiro.petshop.App.Funcionario;
 import java.util.List;
 
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
 public class ListarTodosFuncionario {
     public static void main(String[] args) {
@@ -18,7 +18,6 @@ public class ListarTodosFuncionario {
             System.out.println("CPF: " + funcionario.getCpf());
             System.out.println("Função: " + funcionario.getFuncao());
             System.out.println("Telefone: " + funcionario.getTelefone());
-            System.out.println("Endereço: " + funcionario.getEndereco());
         }
     }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 import br.edu.unijuazeiro.petshop.DAO.Conexao.ConexaoFabrica;
 
 public class FuncionarioDAO {

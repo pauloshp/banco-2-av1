@@ -1,8 +1,8 @@
 package br.edu.unijuazeiro.petshop.App.Pet;
 
 import br.edu.unijuazeiro.petshop.DAO.PetDAO;
-import br.edu.unijuazeiro.petshop.model.Cliente;
-import br.edu.unijuazeiro.petshop.model.Pet;
+import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
+import br.edu.unijuazeiro.petshop.model.Cliente.Pet;
 
 public class AdicionarPet {
     public static void main(String[] args) {

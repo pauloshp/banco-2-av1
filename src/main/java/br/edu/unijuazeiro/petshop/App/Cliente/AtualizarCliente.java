@@ -1,13 +1,12 @@
 package br.edu.unijuazeiro.petshop.App.Cliente;
 
 import br.edu.unijuazeiro.petshop.DAO.ClienteDAO;
-import br.edu.unijuazeiro.petshop.model.Cliente;
-import br.edu.unijuazeiro.petshop.model.Endereco;
+import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
 
 public class AtualizarCliente {
     public static void main(String[] args) {
 
-       // Update Cliente
+        // Update Cliente
         ClienteDAO dao = new ClienteDAO();
         
         Cliente c = dao.findId(4);

@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import br.edu.unijuazeiro.petshop.DAO.Conexao.ConexaoFabrica;
-import br.edu.unijuazeiro.petshop.model.Produto;
+import br.edu.unijuazeiro.petshop.model.Negocios.Produto;
 
 public class ProdutoDAO {
     public List<Produto> listAll() {

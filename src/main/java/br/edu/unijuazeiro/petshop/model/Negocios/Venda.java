@@ -1,4 +1,4 @@
-package br.edu.unijuazeiro.petshop.model;
+package br.edu.unijuazeiro.petshop.model.Negocios;
 
 import java.sql.Date;
 import java.util.List;
@@ -20,12 +20,14 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Venda {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "gen_venda")
     @SequenceGenerator(sequenceName = "seq_venda", allocationSize = 1, initialValue = 1, name = "gen_venda")
-   
     private Integer codigo;
+
     private Double valorTotal;
+    
     private Date data;
 
     @OneToMany

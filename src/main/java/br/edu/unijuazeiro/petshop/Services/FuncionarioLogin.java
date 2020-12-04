@@ -2,18 +2,16 @@ package br.edu.unijuazeiro.petshop.Services;
 
 import java.util.List;
 
-
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
-public class LoginFuncionario {
-        
+public class FuncionarioLogin {
+
     private FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
     public void save(Funcionario funcionario) {
         if (funcionario.getNome().length() > 30) {
-            // disparo uma exception
         }
         funcionarioDAO.persist(funcionario);
     }

@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
 import br.edu.unijuazeiro.petshop.DAO.Conexao.ConexaoFabrica;
-import br.edu.unijuazeiro.petshop.model.Cliente;
+import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
 
 public class ClienteDAO {
 

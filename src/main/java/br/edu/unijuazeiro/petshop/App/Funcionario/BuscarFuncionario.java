@@ -1,7 +1,7 @@
 package br.edu.unijuazeiro.petshop.App.Funcionario;
 
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
 public class BuscarFuncionario {
     public static void main(String[] args) {
@@ -15,6 +15,5 @@ public class BuscarFuncionario {
         System.out.println("CPF: " + f.getCpf());
         System.out.println("Função: " + f.getFuncao());
         System.out.println("Telefone: " + f.getTelefone());
-        System.out.println("Endereço: " + f.getEndereco());
     }
 }

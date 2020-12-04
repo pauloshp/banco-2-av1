@@ -1,11 +1,10 @@
 package br.edu.unijuazeiro.petshop.App.Funcionario;
 
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
 public class RemoverFuncionario {
     public static void main(String[] args) {
-
 
         FuncionarioDAO dao = new FuncionarioDAO();
 

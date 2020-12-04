@@ -1,7 +1,7 @@
 package br.edu.unijuazeiro.petshop.App.Produto;
 
 import br.edu.unijuazeiro.petshop.DAO.ProdutoDAO;
-import br.edu.unijuazeiro.petshop.model.Produto;
+import br.edu.unijuazeiro.petshop.model.Negocios.Produto;
 
 public class BuscarProduto {
     public static void main(String[] args) {
@@ -12,7 +12,6 @@ public class BuscarProduto {
          Produto p = dao.findId(2);
          System.out.println("Id: " + p.getCodigo());
          System.out.println("Nome: " + p.getNome());
-         System.out.println("Marca: " + p.getMarca());
          System.out.println("Valor: " + p.getValor());
     }   
 }

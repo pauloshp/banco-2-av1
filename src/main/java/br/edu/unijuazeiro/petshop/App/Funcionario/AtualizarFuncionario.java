@@ -1,7 +1,7 @@
 package br.edu.unijuazeiro.petshop.App.Funcionario;
 
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
-import br.edu.unijuazeiro.petshop.model.Funcionario;
+import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
 public class AtualizarFuncionario {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class AtualizarFuncionario {
          f.setEmail("");
          f.setTelefone("");
          f.setFuncao("");
-         //f.setEndereco(endereco);
          dao.merge(f);
      }
 }

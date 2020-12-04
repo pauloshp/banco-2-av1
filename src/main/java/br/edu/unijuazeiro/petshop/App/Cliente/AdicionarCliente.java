@@ -1,7 +1,7 @@
 package br.edu.unijuazeiro.petshop.App.Cliente;
 
 import br.edu.unijuazeiro.petshop.DAO.ClienteDAO;
-import br.edu.unijuazeiro.petshop.model.Cliente;
+import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
 
 
 public class AdicionarCliente {
@@ -14,6 +14,7 @@ public class AdicionarCliente {
         c.setNome("Thiago");
         c.setCpf("100.100.100-10");
         c.setEmail("xico@bol.uol.msn.edu.br");
+        //setEndereco();
         dao.persist(c);
     }
 }

@@ -3,7 +3,7 @@ package br.edu.unijuazeiro.petshop.App.Pet;
 import java.util.List;
 
 import br.edu.unijuazeiro.petshop.DAO.PetDAO;
-import br.edu.unijuazeiro.petshop.model.Pet;
+import br.edu.unijuazeiro.petshop.model.Cliente.Pet;
 
 public class ListarTodosPets {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 
 import br.edu.unijuazeiro.petshop.DAO.Conexao.ConexaoFabrica;
-import br.edu.unijuazeiro.petshop.model.Pet;
+import br.edu.unijuazeiro.petshop.model.Cliente.Pet;
 
 public class PetDAO {
 
