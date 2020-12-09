@@ -12,8 +12,7 @@ public class AtualizarCliente {
         Cliente c = dao.findId(4);
         c.setNome("Thiago");
         c.setCpf("100.100.100-10");
-        c.setEmail("xico@bol.uol.msn.edu.br");
-        //c.setEndereco(Endereco);
+        c.setEmail("email@mail.com");
         dao.merge(c);
     }
 }

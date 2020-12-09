@@ -8,6 +8,7 @@ public class BuscarFuncionario {
 
         FuncionarioDAO dao = new FuncionarioDAO();
 
+        // Busca funcionario pelo Id
         Funcionario f = dao.findId(1);
         System.out.println("Id: " + f.getCodigo());
         System.out.println("Nome: " + f.getNome());
@@ -15,5 +16,16 @@ public class BuscarFuncionario {
         System.out.println("CPF: " + f.getCpf());
         System.out.println("Função: " + f.getFuncao());
         System.out.println("Telefone: " + f.getTelefone());
+
+         // Buscar funcionario pelo email;
+         Funcionario f = dao.findByEmail("email@mail.com");
+         System.out.println("Id: " + f.getCodigo());
+         System.out.println("Nome: " + f.getNome());
+         System.out.println("Email: " + f.getEmail());
+         System.out.println("CPF: " + f.getCpf());
+         System.out.println("Função: " + f.getFuncao());
+         System.out.println("Telefone: " + f.getTelefone());
+
+
     }
 }

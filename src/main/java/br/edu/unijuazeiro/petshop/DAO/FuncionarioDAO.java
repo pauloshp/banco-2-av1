@@ -3,6 +3,7 @@ package br.edu.unijuazeiro.petshop.DAO;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 import br.edu.unijuazeiro.petshop.DAO.Conexao.ConexaoFabrica;
@@ -73,4 +74,22 @@ public class FuncionarioDAO {
             }
         }
     }   
+
+    public Funcionario findByEmail(String email) {
+        EntityManager em = ConexaoFabrica.getEntityManager();
+        Funcionario f = null;
+        try {
+            f = em.createQuery("from Funcionario f where f.email = :mail", Funcionario.class).setParameter("mail", email)
+                    .getSingleResult();
+        } catch (NoResultException e) {
+             e.printStackTrace();
+             System.out.println("Não foi encontrado funcionario com esse e-mail.");
+            return null;
+        }
+        if (em.isOpen()) {
+            em.close();
+        }
+        return f;
+    }
+
 }

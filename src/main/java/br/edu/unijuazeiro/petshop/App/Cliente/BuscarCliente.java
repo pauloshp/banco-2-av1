@@ -20,12 +20,30 @@ public class BuscarCliente {
             System.out.println("CPF: " + c.getCpf());
         });
 
-        // Buscar Cliente pelo email; 
-        Cliente c = dao.findByEmail("xico@bol.uol.msn.edu.br");
+        // Buscar Cliente pelo email;
+        Cliente c = dao.findByEmail("email@mail.com");
         System.out.println("Id: " + c.getCodigo());
         System.out.println("Nome: " + c.getNome());
         System.out.println("Email: " + c.getEmail());
         System.out.println("CPF: " + c.getCpf());
+
+        // Buscar por Nome ou Endereço;
+        List<Cliente> clientes = dao.findByNameOrAddress("Rua galinha preta");
+        clientes.forEach(c -> {
+            System.out.println("Id: " + c.getCodigo());
+            System.out.println("Nome: " + c.getNome());
+            System.out.println("Email: " + c.getEmail());
+            System.out.println("CPF: " + c.getCpf());
+        });
+
+        // Buscar Cliente por Nome e Endereço;
+        List<Cliente> clientes = dao.findByNameAndAddress("Rua galinha preta", "Thiago");
+        clientes.forEach(c -> {
+            System.out.println("Id: " + c.getCodigo());
+            System.out.println("Nome: " + c.getNome());
+            System.out.println("Email: " + c.getEmail());
+            System.out.println("CPF: " + c.getCpf());
+        });
 
     }
 }

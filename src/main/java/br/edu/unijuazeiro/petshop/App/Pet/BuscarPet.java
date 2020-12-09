@@ -7,7 +7,7 @@ public class BuscarPet {
 
     public static void main(String[] args) {
     
-        // Select Pet
+        // Buscar Pet pelo Id
         PetDAO dao = new PetDAO();
 
         Pet a = dao.findId(1);

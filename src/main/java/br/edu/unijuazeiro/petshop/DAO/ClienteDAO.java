@@ -74,6 +74,7 @@ public class ClienteDAO {
         }
     }
 
+    //
     public Cliente findByEmail(String email) {
         EntityManager em = ConexaoFabrica.getEntityManager();
         Cliente c = null;
@@ -101,11 +102,22 @@ public class ClienteDAO {
         return clientes;
     }
 
-    public List<Cliente> findByNameOrAddress(String nomereco) {
+    public List<Cliente> findByNameOrAddress(String texto) {
         EntityManager em = ConexaoFabrica.getEntityManager();
         List<Cliente> clientes = em.createQuery("select c from Cliente c join c.endereco a "+
            "where lower(c.nome) like lower(:search) or lower(a.rua) like lower(:search)", Cliente.class)
-                .setParameter("search", "%" + nomereco + "%").getResultList();
+                .setParameter("search", "%" + texto + "%").getResultList();
+        if (em.isOpen()) {
+            em.close();
+        }
+        return clientes;
+    }
+
+    public List<Cliente> findByNameAndAddress(String nome, String endereco) {
+        EntityManager em = ConexaoFabrica.getEntityManager();
+        List<Cliente> clientes = em.createQuery("select c from Cliente c join c.endereco a "+
+           "where lower(c.nome) like lower(:searchnome) and lower(a.rua) like lower(:searchrua)", Cliente.class)
+                .setParameter("searchnome", "%" + nome + "%").setParameter("searchrua", "%" + endereco + "%").getResultList();
         if (em.isOpen()) {
             em.close();
         }

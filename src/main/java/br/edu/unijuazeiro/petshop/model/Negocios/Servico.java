@@ -1,6 +1,6 @@
 package br.edu.unijuazeiro.petshop.model.Negocios;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,11 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import br.edu.unijuazeiro.petshop.model.Cliente.Cliente;
+import br.edu.unijuazeiro.petshop.model.Cliente.Pet;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,20 +29,20 @@ public class Servico {
     @SequenceGenerator(sequenceName = "seq_servico", allocationSize = 1, initialValue = 1, name = "gen_servico")
     private Integer codigo;
 
-    private String nome;
+    private String tipo;
 
-    private Date data;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date criadoEm;
 
     private Double valor;
 
-    private String tipo;
-
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @OneToOne
     private Cliente cliente;
 
-    //private Funcionario funcionario;
+    @OneToOne
+    private Funcionario funcionario;
     
-    //private Pet pet;
+    @OneToOne
+    private Pet pet;
 
 }

@@ -9,8 +9,8 @@ public class AdicionarProduto {
         ProdutoDAO dao = new ProdutoDAO();
 
         Produto p = new Produto();
-        p.setNome("Ração sabor carne");
-        p.setValor(25.0);
+        p.setNome("Shampoo");
+        p.setValor(24.0);
         dao.persist(p);
     }
 }

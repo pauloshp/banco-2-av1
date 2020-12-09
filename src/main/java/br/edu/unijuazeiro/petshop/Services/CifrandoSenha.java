@@ -1,12 +1,10 @@
 package br.edu.unijuazeiro.petshop.Services;
 
-import java.util.List;
-
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import br.edu.unijuazeiro.petshop.DAO.FuncionarioDAO;
 import br.edu.unijuazeiro.petshop.model.Negocios.Funcionario;
 
-public class FuncionarioLogin {
+public class CifrandoSenha {
 
     private FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
@@ -26,18 +24,15 @@ public class FuncionarioLogin {
         funcionarioDAO.merge(funcionario);
     }
 
-    public Funcionario login(Integer codigo, String senha) {
-        Funcionario f = funcionarioDAO.findId(codigo);
+    public Funcionario login(String email, String senha) {
+        Funcionario f = funcionarioDAO.findByEmail(email);
         if (f == null) {
             throw new RuntimeException("Preencha os Campos!");
         }
         if (!BCrypt.verifyer().verify(senha.toCharArray(), f.getSenha().toCharArray()).verified) {
-            throw new RuntimeException("Dados inválido");
+            throw new RuntimeException("Dados inválidos");
         }
         return f;
     }
 
-    public List<Funcionario> list() {
-        return funcionarioDAO.listAll();
-    }
 }
